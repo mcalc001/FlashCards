@@ -1,0 +1,11 @@
+body{
+  background-color: #1A1A1D;
+}
+.cardRow{
+  display: block;
+  padding: 5px;
+}
+.btnRow{
+  display: black;
+  padding: 5px;
+}
