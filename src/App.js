@@ -21,7 +21,7 @@ class App extends Component {
       currentCard: {}
     }
   }
-
+  // conection to Firebase database, updates state with random card from database 
 componentWillMount(){
   const currentCards = this.state.cards;
    this.database.on('child_added', snap => {
@@ -38,12 +38,14 @@ componentWillMount(){
 
  
 }
-
+//generates random card 
 getRandomCard(currentCards){
   var card = currentCards[Math.floor(Math.random() * currentCards.length)]
   return (card);
 }
 
+// triggered by passing function in Drawbutton.js (function- drawcard)
+// updates state with randomly selected card
 updateCard(){
   const currentCards = this.state.cards
   this.setState({
